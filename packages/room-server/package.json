@@ -8,7 +8,7 @@
     "prebuild": "rimraf dist",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "start": "ENABLE_SOCKET=true nest start",
+    "start": "ENABLE_SOCKET=true nest start >> /tmp/room.log 2>&1",
     "start:dev": "yarn start --watch",
     "start:debug": "yarn start --debug --watch",
     "start:perf:flame": "clinic flame -- node dist/main",

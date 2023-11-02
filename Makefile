@@ -313,7 +313,7 @@ _run-local-backend-server:
 	MYSQL_HOST=127.0.0.1 \
 	REDIS_HOST=127.0.0.1 \
 	RABBITMQ_HOST=127.0.0.1 \
-	java -jar application/build/libs/application.jar
+	java -jar -Xdebug -Xrunjdwp:transport=dt_socket,address=8725,server=y,suspend=n application/build/libs/application.jar
 
 _run-local-room-server:
 	source scripts/export-env.sh $$ENV_FILE;\
